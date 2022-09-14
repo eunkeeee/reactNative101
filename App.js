@@ -3,22 +3,14 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello</Text>
-      <StatusBar style="auto" />
+    <View style={{ flexDirection: "row" }}>
+      <View
+        style={{ width: 100, height: 100, backgroundColor: "tomato" }}
+      ></View>
+      <View style={{ width: 100, height: 100, backgroundColor: "teal" }}></View>
+      <View
+        style={{ width: 100, height: 100, backgroundColor: "orange" }}
+      ></View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    fontSize: 28,
-    color: "red",
-  },
-});
