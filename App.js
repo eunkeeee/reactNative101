@@ -3,8 +3,15 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello! I made a React Native App!</Text>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Text style={styles.text}>Hellooooo</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,5 +23,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  text: {
+    fontSize: 28,
   },
 });
