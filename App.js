@@ -76,7 +76,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "tomato",
+    backgroundColor: "yellow",
   },
   city: {
     flex: 1.2,
@@ -95,11 +95,10 @@ const styles = StyleSheet.create({
   temp: {
     marginTop: 50,
     fontWeight: "600",
-    fontSize: 178,
+    fontSize: 150,
   },
   description: {
-    marginTop: -30,
-    fontSize: 60,
+    fontSize: 50,
   },
   tinyText: {
     fontSize: 20,
