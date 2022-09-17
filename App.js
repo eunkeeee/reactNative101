@@ -51,15 +51,14 @@ export default function App() {
       >
         {days.length === 0 ? (
           <View style={styles.day}>
-            <ActivityIndicator
-              color="white"
-              style={{ marginTop: 10 }}
-              size="large"
-            />
+            <ActivityIndicator style={{ marginTop: 10 }} size="large" />
           </View>
         ) : (
           days.map((day, index) => (
             <View key={index} style={styles.day}>
+              <Text style={styles.date}>
+                {new Date(day.dt * 1000).toString().substring(0, 10)}
+              </Text>
               <Text style={styles.temp}>
                 {parseFloat(day.temp.day).toFixed(1)}
               </Text>
@@ -92,8 +91,10 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH,
     alignItems: "center",
   },
+  date: {
+    fontSize: 20,
+  },
   temp: {
-    marginTop: 50,
     fontWeight: "600",
     fontSize: 150,
   },
