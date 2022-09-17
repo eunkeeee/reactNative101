@@ -57,17 +57,15 @@ export default function App() {
       >
         {days.length === 0 ? (
           <View style={styles.day}>
-            <ActivityIndicator size="large" />
+            <ActivityIndicator size="large" style={{ marginTop: 10 }} />
           </View>
         ) : (
-          <View style={styles.day}>
-            days.map((day,index) => (
+          days.map((day, index) => (
             <View key={index} style={styles.day}>
               <Text style={styles.temp}>{day.temp.day}</Text>
               <Text style={styles.description}>{day.weather[0].main}</Text>
             </View>
-            ) )
-          </View>
+          ))
         )}
       </ScrollView>
     </View>
